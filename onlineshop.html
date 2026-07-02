@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎉 Free Jersey!</title>
+
+    <style>
+        /* ===== গ্লোবাল সেটআপ ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0b0b0b;
+            /* ফলের জন্য ব্যাকগ্রাউন্ড */;
+            padding: 20px;
+        }
+
+        /* ===== মূল কার্ড ===== */
+        .card {
+            max-width: 650px;
+            width: 100%;
+            background: rgba(20, 20, 20, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 40px;
+            padding: 2.5rem 2rem 2.5rem;
+            text-align: center;
+            border: 1px solid rgba(255, 215, 0, 0.15);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.9), 0 0 40px rgba(255, 215, 0, 0.03);
+            transition: 0.3s;
+        }
+
+        /* ===== হেডিং ===== */
+        .card h1 {
+            font-size: 3.2rem;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #f5af19, #f12711);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.3rem;
+            line-height: 1.2;
+        }
+
+        .card .sub-text {
+            font-size: 1rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.5);
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            border-top: 1px solid rgba(255, 215, 0, 0.1);
+            border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+            padding: 0.6rem 0;
+            display: inline-block;
+            margin-bottom: 1.8rem;
+        }
+
+        /* ===== ইমেজ র‍্যাপার (সবচেয়ে গুরুত্বপূর্ণ) ===== */
+        .image-box {
+            background: #0a0a0a;
+            border-radius: 24px;
+            padding: 10px;
+            border: 2px solid rgba(255, 215, 0, 0.08);
+            box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.6);
+            margin-bottom: 2rem;
+            transition: 0.3s ease;
+        }
+
+        .image-box:hover {
+            border-color: rgba(255, 215, 0, 0.3);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .image-box img {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-height: 480px;
+            /* বেশি লম্বা হলে স্ক্রল না করে সাইজে আনা */
+            object-fit: contain;
+            /* ছবি বিকৃত না করে ঠিকমতো ফিট করা */
+            border-radius: 16px;
+            background: #000;
+            /* ছবি লোড না হলে ব্যাকগ্রাউন্ড দেখাবে */;
+        }
+
+        /* ===== বাটন গ্রুপ ===== */
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 0.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2.5rem;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #f5af19, #f12711);
+            color: #fff;
+            box-shadow: 0 8px 25px rgba(241, 39, 17, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 12px 40px rgba(241, 39, 17, 0.5);
+        }
+
+        .btn-primary:active {
+            transform: scale(0.95);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.06);
+            color: #aaa;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.12);
+            color: #fff;
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* ===== ফুটার ===== */
+        .footer-note {
+            margin-top: 2rem;
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.12);
+            letter-spacing: 2px;
+        }
+
+        /* ===== মোবাইল রেসপন্সিভ ===== */
+        @media (max-width: 550px) {
+            .card {
+                padding: 1.8rem 1.2rem;
+            }
+            .card h1 {
+                font-size: 2.2rem;
+            }
+            .image-box img {
+                max-height: 300px;
+            }
+            .btn {
+                padding: 0.6rem 1.6rem;
+                font-size: 0.85rem;
+                width: 100%;
+                max-width: 200px;
+            }
+            .btn-group {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .card h1 {
+                font-size: 1.6rem;
+            }
+            .image-box img {
+                max-height: 220px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+
+        <!-- টাইটেল -->
+        <h1>🎊 WELLCOME WELLCOME !!</h1>
+        <div class="sub-text">✦ আপনার জন্য ফ্রি জার্সি ✦</div>
+
+        <!-- 📸 ইমেজ বসানোর জায়গা -->
+        <div class="image-box">
+            <!-- 
+                ⚠️ এখানে আপনার ছবির পাথ ঠিক করুন।
+                আমি ধরে নিয়েছি: images/free.jpg
+                আপনার ছবি যদি অন্য নামে হয়, তাহলে src="..." পরিবর্তন করুন।
+            -->
+            <img src="images/free.jpg" alt="Fuck You! Free Jersey" />
+        </div>
+
+        <!-- বাটন -->
+        <div class="btn-group">
+            <a href="cr7.html" class="btn btn-primary">⬅ শপে ফিরে যান</a>
+            <a href="onlineshop.html" class="btn btn-secondary">🏆 দাবি করুন</a>
+        </div>
+
+        <div class="footer-note">⚽ CR7 • 2008 • All Rights Reserved</div>
+
+    </div>
+
+</body>
+</html>

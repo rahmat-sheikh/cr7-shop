@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Jersey</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(145deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .container {
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 40px;
+            padding: 2.5rem 2rem;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #f5af19, #f12711);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        .sub {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .goat-img {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            border-radius: 24px;
+            border: 3px solid rgba(255, 215, 0, 0.3);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
+            transition: transform 0.4s ease;
+            margin: 0.5rem 0 1.5rem;
+        }
+
+        .goat-img:hover {
+            transform: scale(1.03);
+        }
+
+        .btn-home {
+            display: inline-block;
+            background: linear-gradient(135deg, #f5af19, #f12711);
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.2rem;
+            padding: 0.8rem 2.5rem;
+            border-radius: 60px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            box-shadow: 0 6px 30px rgba(241, 39, 17, 0.4);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-home:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 45px rgba(241, 39, 17, 0.7);
+        }
+
+        .btn-home:active {
+            transform: scale(0.95);
+        }
+
+        footer {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⚽ Free Jersey</h1>
+        <p class="sub">Get your free CR7 jersey today!</p>
+        <img src="images/goat.jpg" alt="GOAT" class="goat-img" />
+        <br />
+        <a href="onlineshop.html" class="btn-home">🎁 Get Free</a>
+        <footer>Limited offer • while stocks last</footer>
+    </div>
+</body>
+</html>
